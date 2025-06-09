@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iShoppers - iShopper Profile</title>
+    <link rel="stylesheet" href="css/ishopper-profileupdate-style.css">
+</head>
+<body>
+    <header>
+        <h1>iShopper Profile</h1>
+    </header>
+
+    <section id="profile-section">
+        <form id="ishopper-profile-form" enctype="multipart/form-data">
+            <!-- Basic Information -->
+            <h2>Basic Information</h2>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <!-- Add other options if needed -->
+            </select>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="height">Height:</label>
+            <input type="text" id="height" name="height" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <!-- Additional Attributes -->
+            <h2>Additional Information</h2>
+
+            <label for="experience">Years of Experience:</label>
+            <input type="number" id="experience" name="experience" required>
+
+            <label for="languages_spoken">Languages Spoken:</label>
+            <input type="text" id="languages_spoken" name="languages_spoken" placeholder="Separate with commas" required>
+
+            <label for="availability">Availability:</label>
+            <input type="text" id="availability" name="availability" placeholder="e.g., Mon-Fri, 7am-6pm" required>
+
+            <label for="has_own_vehicle">Do you have your own vehicle?</label>
+            <select id="has_own_vehicle" name="has_own_vehicle" required>
+                <option value="">Select Option</option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+
+            <label for="vehicle_type">Vehicle Type:</label>
+            <input type="text" id="vehicle_type" name="vehicle_type" placeholder="e.g., Car, Motorbike">
+
+            <label for="shopping_expertise">Shopping Expertise:</label>
+            <input type="text" id="shopping_expertise" name="shopping_expertise" placeholder="Separate with commas" required>
+
+            <label for="max_distance">Maximum Distance (e.g., 10 km):</label>
+            <input type="text" id="max_distance" name="max_distance" required>
+
+            <label for="average_delivery_time">Average Delivery Time:</label>
+            <input type="text" id="average_delivery_time" name="average_delivery_time" placeholder="e.g., 2 hours" required>
+
+            <label for="preferred_payment_method">Preferred Payment Method:</label>
+            <input type="text" id="preferred_payment_method" name="preferred_payment_method" required>
+
+            <label for="languages_spoken">Languages Spoken:</label>
+            <input type="text" id="languages_spoken" name="languages_spoken" placeholder="e.g., English, Hausa" required>
+
+            <label for="profile_picture">Profile Picture:</label>
+            <input type="file" id="profile_picture" name="profile_picture">
+
+            <!-- Submit Button -->
+            <button type="submit">Save Profile</button>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById('ishopper-profile-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+
+            fetch('/ishopper/profile', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                // Optionally redirect or update the page
+            })
+            .catch(err => console.error('Error:', err));
+        });
+    </script>
+    <footer>
+        <p>© 2024 iShoppers</p>
+    </footer>
+</body>
+</html>

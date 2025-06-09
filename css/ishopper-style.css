@@ -1,0 +1,91 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Dashboard section styling */
+#dashboard-section {
+    max-width: 800px; /* Maximum width for the dashboard */
+    margin: 20px auto; /* Center the dashboard */
+    padding: 20px;
+    background: white; /* White background for the section */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Headings */
+h2 {
+    border-bottom: 2px solid #4CAF50; /* Green underline */
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Order lists styling */
+ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+}
+
+li {
+    background: #e9ecef; /* Light gray background */
+    margin: 10px 0; /* Margin between items */
+    padding: 10px; /* Padding for list items */
+    border-radius: 3px; /* Rounded corners */
+}
+
+/* Profile section styling */
+#updateProfile {
+    margin: 20px 0; /* Margin above and below the link */
+}
+
+#updateProfile a {
+    color: #4CAF50; /* Green link color */
+    text-decoration: none; /* Remove underline */
+}
+
+#updateProfile a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Logout button styling */
+#logout-btn {
+    background: #d9534f; /* Bootstrap danger color */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    padding: 10px 15px; /* Padding for the button */
+    border-radius: 3px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Increase font size */
+}
+
+#logout-btn:hover {
+    background: #c9302c; /* Darker red on hover */
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #f1f1f1; /* Light gray footer */
+    position: relative; /* Ensure proper positioning */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+}

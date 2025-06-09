@@ -1,0 +1,290 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Josefin Sans', Sans-Serif;
+}
+
+/* Hero Section */
+.hero {
+   height: 100vh;
+   width: 100%;
+   background-image: url('../image/shop-groceries.jpg');
+   background-size: cover;
+   background-position: center;
+   text-align: center;
+}
+
+/* Navigation */
+nav {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 1rem;
+   border-bottom: 1px groove black;
+   background: black;
+}
+
+.logo img {
+   width: 100px; /* Adjust size as needed */
+}
+
+nav ul {
+   list-style: none;
+   display: flex;
+}
+
+nav ul li {
+   margin-right: 1.5rem;
+}
+
+nav ul li a {
+   text-decoration: none;
+   color: white;
+   font-weight: bold;
+   transition: color 0.4s;
+}
+
+nav ul li a:hover {
+   color: #ea1538;
+}
+
+.sub {
+   border: none;
+   text-decoration: none;
+   background: #ea1538;
+   padding: 0.75rem 1.5rem;
+   color: white;
+   font-weight: bold;
+   border-radius: 30px;
+   transition: transform 0.3s ease;
+}
+
+.sub:hover {
+   transform: scale(1.1);
+   cursor: pointer;
+}
+
+/* Search Bar */
+.search-bar {
+   padding: 0.5em;
+   border: 1px solid #ccc;
+   border-radius: 0.25rem;
+   margin-right: 1em;
+   width: 200px;
+   outline: none;
+}
+
+/* Header Showcase */
+#showcase {
+   color: #ea1538;
+   padding: 2rem 1rem;
+   text-shadow: 4px 5px 9px black;
+   background: goldenrod;
+   margin: 2rem auto;
+   border-radius: 10px;
+   max-width: 800px;
+}
+
+#showcase h1 {
+   font-size: 2.3rem;
+}
+
+#showcase .action {
+   color: white;
+   border: 1px inset goldenrod; 
+   margin-top: 1rem;
+}
+
+.button {
+   display: inline-block;
+   margin-top: 1.5rem;
+   border: none;
+   text-decoration: none;
+   background: #ea1538;
+   padding: 0.75rem 1.5rem;
+   color: white;
+   font-weight: bold;
+   border-radius: 30px;
+   line-height: 1.9;
+   transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.button:hover {
+   transform: scale(0.9);
+   cursor: pointer;
+   background: white;
+   color: #ea1538;
+}
+
+/* Moving Text Animation */
+.moving-text p {
+   color: white;
+   font-size: 1.5rem;
+   text-shadow: 4px 4px 8px #ea1538;
+   font-weight: bolder;
+   animation: moveText 10s linear infinite;
+}
+
+@keyframes moveText {
+   0% { transform: translateX(100%); }
+   100% { transform: translateX(-100%); }
+}
+
+/* Footer */
+footer {
+   background-color: #0c2b14;
+   color: white;
+   padding: 20px;
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+}
+
+.footer-section {
+   flex: 1;
+   margin: 10px;
+   transition: transform 0.3s ease;
+}
+
+.footer-section:hover {
+   transform: scale(1.05);
+}
+
+/**{
+   margin:0;
+   padding:0;
+box-sizing:border-box;
+font-family:'Josefin Sans' Sans-Serif;
+}
+
+.hero{
+height:100vh;
+width:100%;
+background-image:url('../image/shop-groceries.jpg');
+background-size:cover;
+background-position:center;
+}
+
+nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding-top:40px;
+padding-right:10px;
+padding-left:10px;
+border:1px groove black;
+background:black;
+}
+
+.logo{
+color:white;
+font-size:30px;
+
+
+}
+header{
+text-align:center;
+align-items:center;
+justify-content:center;
+color:#ea1538;
+padding:30px 20px;
+text-shadow: 4px 5px 9px black;
+background: goldenrod;
+position: relative;
+margin-left: 400px;
+margin-right: 400px;
+margin-top: 50px;
+
+}
+.move{
+   color:white;
+   font-size: 40px;
+   text-shadow: 7px 7px 7px #ea1538;
+   font-weight: bolder;
+
+}
+span{color:#ea1538;}
+
+nav ul li{
+list-style-type:none;
+display:inline-block;
+padding:10px 20px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+nav ul li a:hover{
+color:#ea1538;
+transition:.4s;
+}
+
+.sub{
+border:none;
+text-decoration:none;
+background:#ea1538;
+padding:12px 30px;
+color:white;
+font-weight:bold;
+border-radius:30px;
+
+}
+.sub:hover{
+transform:scale(1.1);
+cursor:pointer;
+}
+
+.button{
+margin-top:7%;
+border:none;
+text-decoration:none;
+background:#ea1538;
+padding:12px 30px;
+color:white;
+font-weight:bold;
+border-radius:30px;
+line-height:1.9;
+}
+.action{color:white;
+border: 1 inset goldenrod;}
+
+.button:hover
+{
+transform:scale(0.7);
+cursor:pointer;
+background:white;
+color:#ea1538;
+}
+
+/*
+footer {
+   background-color: #333;
+   color: white;
+   text-align: center;
+   padding: 1rem;
+   position: fixed;
+   width: 100%;
+   bottom: 30;
+   
+}*/
+footer {
+   background-color: #270c68;
+   color: white;
+   padding: 20px;
+   display: flex;
+   justify-content: space-around;
+ }
+ 
+ .footer-section {
+   flex: 1;
+   margin: 10px;
+   transition: transform 0.3s ease;
+ }
+ 
+ .footer-section:hover {
+   transform: scale(1.05); /* Slightly scale on hover */
+ }

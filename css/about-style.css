@@ -1,0 +1,124 @@
+/* register.css */
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px 0;
+  background-color: #5cb85c; /* Header background color */
+  color: white; /* Header text color */
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+/* Section Styles */
+section {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Services Section Styles */
+#services h2 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+  color: #5cb85c; /* Section header color */
+}
+
+#ourservice {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Paragraph Styles */
+p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555; /* Paragraph text color */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  body {
+      padding: 10px;
+  }
+
+  header h1 {
+      font-size: 2rem;
+  }
+
+  section {
+      padding: 15px;
+  }
+
+  #services h2 {
+      font-size: 1.5rem;
+  }
+}
+
+
+/*body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    text-align: center;
+    background:linear-gradient( #8d3838, #6e2c34, #aeaeaf, white);
+    background-size: 100% 500%;
+    background-position: 0 40%;
+}
+
+
+
+body:hover {
+  animation:backcolor 20s linear infinite reverse;
+}
+@keyframes backcolor {
+  0%{
+      background-position:0 0%
+  }
+  100%{
+      background-position:0 400%
+  }
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+section {
+    padding: 3px;
+    text-align: center;
+    margin: 2em;
+  display: flex;
+  flex-direction: column;
+  text-shadow: 2px -2px -2px black;
+  width: 50%;
+  margin-left: 25%;
+  
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deeper Life High School Hall of Fame</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/DLHS HF logo.png" alt="DLHS logo" class="logo" id="HF-logo">
+        <h1 class="site-title">Deeper Life High School Hall of Fame</h1>
+        <div class="header-container">
+       
+        <nav>
+            <ul class="menu">
+                <img src="" alt="">
+                <li><a href="#home">Home</a></li>
+                <li><a href="hall-of-fame.html">Hall of Fame</a></li>
+                <li><a href="about.html">About DLHS</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="nearest-campus.html">Nearest Campus</a></li>
+                <li><a href="dlhs-event.html">Upcoming Events</a></li>
+               <div class="btn">
+                <li> <a href="login.html"id="login-btn">Login</a> </li>
+                <li><a href="register.html" id="register-btn">Register</a> </li>
+            </div>
+            </ul>
+            
+        </nav>
+    </div>
+<!----
+        <div class="auth-container">
+            <button id="login-btn">Login</button>
+            <button id="register-btn">Register</button>
+        </div> --->
+        
+    </header>
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Search for the nearest campus..." oninput="handleSearch()">
+        <div id="suggestions"></div>
+        
+    </div>
+    <main>
+        <div class="image-slides">
+            <div class="slide active">
+                <img src="slide1.jpg" alt="Slide 1">
+                <div class="caption">Caption for Slide 1</div>
+                <div class="image-slides">
+                    <div class="slide active">
+                        <img src="slide1.jpg" alt="Slide 1">
+                        <div class="caption">Caption for Slide 1</div>
+                        <div class="image-slides">
+                            <div class="slide active">
+                                <img src="slide1.jpg" alt="Slide 1">
+                                <div class="caption">Caption for Slide 1</div>
+                                <div class="image-slides">
+                                    <div class="slide active">
+                                        <img src="slide1.jpg" alt="Slide 1">
+                                        <div class="caption">Caption for Slide 1</div>
+            </div>
+            <!-- Add other slides here -->
+        </div>
+
+        <section id="achievers">
+            <h2>Achievers</h2>
+            <div id="achievers-list"></div>
+        </section>
+        <div id="map"></div>
+       <!---- <section id="events">
+            <h2>Upcoming Events</h2>
+            <div id="events-list"></div>
+        </section> -->
+    </main>
+
+    <footer>
+        <div class="footer-section">
+            <h3>Management Team</h3>
+            <p>Details about the management team.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Facilities and Partners</h3>
+            <p>Details about facilities and partners.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Academics and Programs</h3>
+            <p>Details about academics and programs.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Events</h3>
+            <p>Details about upcoming events.</p>
+        </div>
+
+        
+
+<script>
+function onPlaceChanged() {
+    const place = autocomplete.getPlace();
+    if (!place.geometry) {
+        return;
+    }
+
+    const latLng = place.geometry.location;
+
+    // Initialize Google Map and center it on the selected location
+    const map = new google.maps.Map(document.getElementById('map'), {
+        center: latLng,
+        zoom: 15
+    });
+
+    // Add a marker at the selected location
+    new google.maps.Marker({
+        position: latLng,
+        map: map
+    });
+}
+</script>
+
+<style>
+#map {
+    height: 400px;
+    width: 100%;
+    margin-top: 20px;
+}
+</style>
+    </footer>
+</body>
+</html>

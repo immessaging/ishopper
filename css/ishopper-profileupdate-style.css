@@ -1,0 +1,98 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark text */
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding */
+    text-align: center; /* Centered text */
+}
+
+/* Profile section styling */
+#profile-section {
+    max-width: 600px; /* Maximum width for the profile section */
+    margin: 20px auto; /* Center the section */
+    padding: 20px;
+    background: white; /* White background */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Form styling */
+form {
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Column layout */
+}
+
+/* Headings */
+h2 {
+    margin-bottom: 15px; /* Margin below headings */
+    color: #4CAF50; /* Green color for headings */
+    border-bottom: 2px solid #4CAF50; /* Underline */
+    padding-bottom: 10px; /* Padding */
+}
+
+/* Labels */
+label {
+    margin-bottom: 5px; /* Margin below labels */
+    font-weight: bold; /* Bold text */
+}
+
+/* Input fields styling */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select {
+    padding: 10px; /* Padding for input fields */
+    margin-bottom: 15px; /* Margin below input fields */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 3px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+}
+
+/* Submit button styling */
+button[type="submit"] {
+    background: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px; /* Padding */
+    border-radius: 3px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Increase font size */
+    transition: background 0.3s ease; /* Transition effect */
+}
+
+button[type="submit"]:hover {
+    background: #45a049; /* Darker green on hover */
+}
+
+/* Footer styling */
+footer {
+    text-align: center; /* Centered text */
+    padding: 20px 0; /* Padding */
+    background: #f1f1f1; /* Light gray footer */
+    position: relative; /* Ensure proper positioning */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    #profile-section {
+        width: 90%; /* Adjust width on smaller screens */
+    }
+}

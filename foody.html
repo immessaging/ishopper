@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/foodi.css">
+    <title>Foody Farm - Groceries & Kitchen</title>
+  </head>
+  
+  <body> 
+  
+  <header class="hero">
+    <nav>
+      <h2 class="logo">
+        <img src="food-farm-and-groceries.png" alt="Foody Farm Logo">
+      </h2>
+  
+      <ul>
+        <li><a href="#Home">HOME</a></li>
+        <li><a href="groceries.html">SHOP GROCERIES</a></li>
+        <li><a href="farm-food.html">SHOP FARM FOOD</a></li>
+        <li><a href="cookbook.html">THE KITCHEN</a></li>
+        <li><a href="healthy-digest.html">BLOG</a></li>
+        <li><a href="about-us.html">ABOUT US</a></li>
+        <li><a href="contact-us.html">CONTACT US</a></li>
+      </ul>
+  
+      <input type="text" placeholder="Search for products..." class="search-bar">
+      <a href="signup.html" class="sub">Subscribe</a>
+    </nav>
+  
+    <div class="moving-text">
+      <p>Food from farm, to fork... healthy life!</p>
+    </div>
+  
+    <header id="showcase"> 
+      <h1>Welcome to Foody Farms and Groceries</h1>
+      <h3 class="action">
+        We provide fresh, affordable, and healthy farm foods and groceries at your door...
+        <br>
+        <p>Click to order for fresh farm food and groceries from the comfort of your bed, directly from the farm and your favourite shop.</p>
+      </h3>
+      <a href="signup.html" class="button">Order Now</a>
+    </header>
+  </header>
+  
+  <main>
+    <section class="sec.a"> 
+      <div id="box-1">
+        <!-- Content for Section A -->
+      </div>
+    </section>
+  
+    <section class="sec.b">
+      <div id="box-2">
+        <!-- Content for Section B -->
+      </div>
+    </section>
+  
+    <section class="sec.c"> 
+      <div id="box-3">
+        <!-- Content for Section C -->
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="footer-section">
+      <h3>Management Team</h3>
+      <p>Details about the management team.</p>
+    </div>
+    <div class="footer-section">
+      <h3>Facilities and Partners</h3>
+      <p>Details about facilities and partners.</p>
+    </div>
+    <div class="footer-section">
+      <h3>Academics and Programs</h3>
+      <p>Details about academics and programs.</p>
+    </div>
+    <div class="footer-section">
+      <h3>Events</h3>
+      <p>Details about upcoming events.</p>
+    </div>
+    <div class="footer-section">
+      <h3>Social Media Handles</h3>
+      <p>WhatsApp <a href="#a">Link</a></p>
+      <p>Facebook <a href="#b">Link</a></p>
+      <p>Twitter <a href="#c">Link</a></p>
+      <p>Instagram <a href="#d">Link</a></p>
+      <p>Truth Media <a href="#e">Link</a></p>
+    </div>
+    <p>© 2024 iShoppers</p>
+  </footer>
+  
+  <!-- <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+  
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    nav ul li {
+      display: inline;
+      margin-right: 2%;
+    }
+  
+    .hero {
+      text-align: center;
+      background-color: #f4f4f4;
+      padding: 2rem 0;
+    }
+  
+    .moving-text p {
+      font-size: 1.2rem;
+      color: green;
+      animation: moveText 10s linear infinite;
+    }
+  
+    @keyframes moveText {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  
+    .sub, .button {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: green;
+      color: white;
+      text-decoration: none;
+      border-radius: 0.25rem;
+    }
+  
+    .search-bar {
+      padding: 0.5em;
+      border: 1px solid #ccc;
+      border-radius: 0.25rem;
+      margin-right: 1em;
+    }
+  
+    footer {
+      display: flex;
+      justify-content: space-around;
+      background-color: #333;
+      color: white;
+      padding: 1rem;
+    }
+  
+    .footer-section {
+      flex: 1;
+      padding: 1rem;
+    }
+  </style>
+-->
+<script>
+    // Search Functionality
+    document.addEventListener("DOMContentLoaded", function() {
+      const searchBar = document.querySelector(".search-bar");
+      const productLinks = document.querySelectorAll("nav ul li a");
+  
+      searchBar.addEventListener("keyup", function(event) {
+        const searchQuery = event.target.value.toLowerCase();
+        productLinks.forEach(link => {
+          const linkText = link.textContent.toLowerCase();
+          if (linkText.includes(searchQuery)) {
+            link.style.display = "inline-block";
+          } else {
+            link.style.display = "none";
+          }
+        });
+      });
+    });
+  
+    // Scroll to Top Button
+    const scrollButton = document.createElement("button");
+    scrollButton.textContent = "↑ Top";
+    scrollButton.style.position = "fixed";
+    scrollButton.style.bottom = "20px";
+    scrollButton.style.right = "20px";
+    scrollButton.style.padding = "10px 15px";
+    scrollButton.style.backgroundColor = "#ea1538";
+    scrollButton.style.color = "white";
+    scrollButton.style.border = "none";
+    scrollButton.style.borderRadius = "5px";
+    scrollButton.style.display = "none";
+    scrollButton.style.cursor = "pointer";
+    document.body.appendChild(scrollButton);
+  
+    scrollButton.addEventListener("click", function() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  
+    window.addEventListener("scroll", function() {
+      if (window.scrollY > 300) {
+        scrollButton.style.display = "block";
+      } else {
+        scrollButton.style.display = "none";
+      }
+    });
+  </script>
+  </body>
+  </html>

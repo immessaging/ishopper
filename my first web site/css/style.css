@@ -1,0 +1,9 @@
+* {
+    padding: 0rem;
+    margin: 0em;
+box-sizing: border-box;
+}
+body {
+    color: red;
+    background-color: aquamarine;
+}

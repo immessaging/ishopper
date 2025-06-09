@@ -1,0 +1,80 @@
+/* Common styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color:ghostwhite ;
+  }
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 10px; 
+    padding: 10px 7px 10px 7px;
+    
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+  font-weight: bolder;
+  padding: 0.7rem;
+}
+nav ul li a {
+    
+    color: white;
+    font-size: larger;
+    font-weight: bolder;
+    background-attachment: fixed;
+}
+  .nav {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+ 
+  
+  .cart-icon {
+    position: relative;
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+  }
+  
+  .buy-now {
+    background-color: #28a745;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .buy-now:hover {
+    background-color: #218838;
+  }
+  
+  .checkout {
+    margin-top: 1rem;
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .checkout:hover {
+    background-color: #0069d9;
+  }

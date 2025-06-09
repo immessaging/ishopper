@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iShoppers - User Login</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <header>
+        <h1>iShoppers Login</h1>
+    </header>
+
+    <section id="login-section">
+        <h2>Login to Your Account</h2>
+        
+        <div id="role-selection">
+            <label>
+                <input type="radio" name="role" value="ishopper" required>
+                iShoppers Login
+            </label>
+            <label>
+                <input type="radio" name="role" value="customer">
+                Customer Login
+            </label>
+        </div>
+        
+        <form id="login-form">
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <button type="submit" id="btn">Login</button>
+        </form>
+        
+        <div id="error-message"></div>
+    </section>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get form values
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const role = document.querySelector('input[name="role"]:checked');
+
+            // Basic validation
+            if (!email || !password || !role) {
+                document.getElementById('error-message').innerText = "Please fill in all fields and select a role.";
+                return;
+            }
+
+            // Clear any previous error messages
+            document.getElementById('error-message').innerText = "";
+
+            // Submit form data to backend
+            fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, password, role: role.value })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Login successful!');
+                    // Redirect user to their dashboard or homepage
+                    window.location.href = '/dashboard';
+                } else {
+                    document.getElementById('error-message').innerText = data.message;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('error-message').innerText = "An error occurred. Please try again.";
+            });
+        });
+    </script>
+    
+    <footer>
+        <p>© 2024 iShoppers</p>
+    </footer>
+</body>
+</html>
+
+
+<!----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iShoppers - User Login</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <header>
+        <h1>iShoppers Login</h1>
+    </header>
+
+    <section id="login-section">
+        <h2>Login to Your Account</h2>
+        <form id="login-form">
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <button type="submit" id="btn">Login</button>
+        </form>
+        <div id="error-message"></div>
+    </section>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get form values
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Basic validation
+            if (!email || !password) {
+                document.getElementById('error-message').innerText = "Please fill in both fields.";
+                return;
+            }
+
+            // Clear any previous error messages
+            document.getElementById('error-message').innerText = "";
+
+            // Submit form data to backend
+            fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, password })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Login successful!');
+                    // Redirect user to their dashboard or homepage
+                    window.location.href = '/dashboard';
+                } else {
+                    document.getElementById('error-message').innerText = data.message;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('error-message').innerText = "An error occurred. Please try again.";
+            });
+        });
+    </script>
+    
+</body>
+<footer>
+    <p>© 2024 iShoppers</p>
+</footer>
+</html>
+-->

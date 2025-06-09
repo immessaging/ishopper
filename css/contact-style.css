@@ -1,0 +1,155 @@
+
+/* contact-style.css */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #333;
+}
+
+/* Section Styles */
+section {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Button Styles */
+button {
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    section {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+
+
+/*body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+section {
+    padding: 3px;
+    text-align: center;
+    border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  text-shadow: 2px -2px -2px black;
+  box-shadow: 2px 4px 5px rgb(12, 12, 12);
+  box-shadow: 2px 4px 5px green;
+  box-shadow: 2px 4px 5px rgb(17, 17, 17);
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 5%;
+}
+
+#contact-form input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+}
+
+#contact-form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+
+#btn:hover {
+    transform: scaleX(1.3);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: green;
+    color: gold;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 30;
+    
+}
